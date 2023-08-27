@@ -1,3 +1,4 @@
+alert("Bug")
 function showOnClick(id){
     var element = document.getElementById(id)
 
