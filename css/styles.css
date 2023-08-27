@@ -61,6 +61,13 @@ nav a:hover {
 .home_section{
     width: 30%;
 }
+.home_section{
+    width: 30%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
 .home_text{
     grid-column-start: 1;
     grid-column-end: 3;
@@ -71,6 +78,7 @@ nav a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
 
     background-image: linear-gradient(-45deg,rgba(101, 93, 90, 0.124), rgba(63, 26, 14, 0.746));
 }
@@ -79,17 +87,29 @@ nav a:hover {
     grid-row: 2;
     width: 100%;
     height:100%;
+    border-radius: 10px;
 
     background-image: linear-gradient(rgba(132, 120, 114, 0), rgba(48, 30, 25, 0.851));
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 120px 120px 120px;
+    grid-template-rows: 120px 120px 120px;
 }
-.home_pastries{
+.home_pastry{
     grid-column: 2;
     grid-row: 2;
     width: 100%;
     height: 100%;
-
+    border-radius: 10px;
     
     background-image: linear-gradient(45deg,rgba(179, 148, 140, 0.198), rgba(69, 31, 22, 0.815));
+
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 120px 120px 120px;
+    grid-template-rows: 120px 120px 120px;
 }
 
 /* Panolino Home end */
@@ -117,6 +137,93 @@ nav a:hover {
 .cta-button:hover {
     background-color: #7e685b;
 }
+
+.home_img{
+    border-radius: 10px;
+    box-shadow: 5px 5px 3px #1a14086e;
+}
+.hm_img_c1{
+    background-image: url("../img/menu/cappuccino.jpg");
+    background-color: #ffb300;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.hm_img_c2{
+    background-image: url("../img/menu/espresso.jpg");
+    background-color: #00ffc3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.hm_img_c3{
+    background-image: url("../img/menu/latte2.jpg");
+    background-color: #564539;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.hm_img_c4{
+    background-image: url("../img/menu/matcha_latte.jpg");
+    background-color: #453a3a;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.hm_img_p1{
+    background-image: url("../img/menu/pastry/crossaint2.jpg");
+    background-color: #b0a47b;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.hm_img_p2{
+    background-image: url("../img/menu/pastry/pandesal2.jpg");
+    background-color: #827956;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.hm_img_p3{
+    background-image: url("../img/menu/pastry/cookies.jpg");
+    background-color: #b3a881;
+
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 4;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
 
 .menu {
     height: fit-content;
