@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background-color: #fff;
+    background-color: #cebb9d;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
 }
@@ -46,19 +46,63 @@ nav a:hover {
 .hero {
     text-align: center;
     padding: 150px 0;
-    background-image: url('hero-bg.jpg');
+    background-image: url('../img/hero-bg.jpg');
     background-size: cover;
-    color: white;
+    color: rgb(235, 231, 211);
+    height: 100vh;
+}
+/* Panolino Home start*/
+.hero{
+    display: grid;
+    row-gap: 20px;
+    column-gap: 20px;
+    padding: 5% 10% 5% 10%;
+}
+.home_section{
+    width: 30%;
+}
+.home_text{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: linear-gradient(-45deg,rgba(101, 93, 90, 0.124), rgba(63, 26, 14, 0.746));
+}
+.home_coffee{
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    height:100%;
+
+    background-image: linear-gradient(rgba(132, 120, 114, 0), rgba(48, 30, 25, 0.851));
+}
+.home_pastries{
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+    height: 100%;
+
+    
+    background-image: linear-gradient(45deg,rgba(179, 148, 140, 0.198), rgba(69, 31, 22, 0.815));
 }
 
+/* Panolino Home end */
 .hero h1 {
-    font-size: 36px;
+    font-size: 50px;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 2px #4c3c32;
 }
 
 .hero p {
-    font-size: 18px;
+    font-size: 25px;
     margin-bottom: 40px;
+    text-shadow: 2px 2px 2px #4c3c32;
 }
 
 .cta-button {
@@ -75,14 +119,159 @@ nav a:hover {
 }
 
 .menu {
+    height: 180vh;
     padding: 100px 0;
     text-align: center;
+    background-color: #e9d0a6;
+
 }
 
 .menu h2 {
-    font-size: 30px;
+    font-size: 50px;
     margin-bottom: 20px;
+    font-weight: 100;
 }
+
+/* Panolino MENU start*/
+
+.items{
+    /*  */
+}
+.item_group{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.item{
+    position: relative;
+    height: 300px;
+    width: 300px;
+    background-color: #4c3c3245;
+    margin: 0 10px 0 10px;
+    box-shadow: 3px 3px 5px#4c3c32;
+    border-radius: 10px;
+}
+.menu_img{
+    width: 100%;
+    border-radius: 10px;
+
+    overflow: hidden;
+    position: relative;
+
+    transition: transform 500ms ease-in-out;
+}
+.item_name{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+/* TEXTS start */
+.item_label{
+    height: 75%;
+    width: 100%;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    background-image: linear-gradient(rgba(251, 215, 173, 0.7), rgba(251, 215, 173, 0.65), rgba(251, 215, 173, 0.0));
+
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+.price{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.description{
+    font-size: 1.1rem;
+    opacity: 0;
+}
+.option{
+    height: 25%;
+    width: 100%;
+    border-radius: 10px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    background-color: #805e3cac;
+    color: #e9d1aa;
+    font-weight: bold;
+
+    display: none;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.option_btn{
+    width: 20%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px 5px 20px 20px;
+    transition-duration: 2500ms;
+    transition-timing-function: cubic-bezier();
+}
+.option_btn:hover{
+    box-shadow: inset 0 -35px 0 rgba(93, 71, 42, 0.819);
+    color: #f8f2e0;
+}
+.btn_hot{
+    background-color: #fff0cc;
+    color: rgb(228, 179, 93);
+}
+.btn_iced{
+    background-color: #ffe5cb;
+    color: rgb(124, 162, 152);
+}
+/* TEXTS end */
+/* Menu label animation start*/
+
+/* IMPLEMENTATION */
+
+.item:hover .description{
+    animation-name: full_opacity;
+    animation-duration: 1000ms;
+    animation-timing-function: cubic-bezier();
+    animation-fill-mode: forwards;
+}
+
+.item:hover .menu_img{
+    animation-name: lower_image_saturation;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
+}
+
+/* ANIMATION */
+
+@keyframes full_opacity {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes lower_image_saturation {
+    from {filter: saturate(100%);}
+    to {filter: saturate(30%);}
+}
+@keyframes increase_size {
+    from {height: 300px; width: 300px;}
+    to {height: 310px; width: 310px}
+}
+
+/* Menu label animation end*/
+
+.divider{
+    width: 300px;
+    border: 1px solid #4c3c32;
+}
+
+/* Panolino MENU end */
 
 .about {
     padding: 100px 0;
