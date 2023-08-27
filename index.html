@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <title>CozyCup Café</title>
-    <script type="text/javascript" src="script.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -190,13 +190,49 @@
     </section>
 
     <section id="about" class="about">
-        <h2>About Us</h2>
-        <p>Discover the story behind CozyCup Café...</p>
+        <h2><a href="about.html" style="color: rgb(110, 79, 79); text-decoration: none;"><u>About Us</u></a></h2>
     </section>
+    
 
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
         <p>Have questions or feedback? Reach out to us...</p>
+
+        <section id="location" class="location">
+            <br>
+            <h3>Our Location</h3>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1196.7706620852528!2d118.7338401246605!3d9.778127003080304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33b56308fbe5d3b9%3A0xa88cba1de1384e9a!2sInformation%20Technology%20Building%2C%20Palawan%20State%20University%20Main%20Campus%2C%20Puerto%20Princesa%2C%205300%20Palawan!5e0!3m2!1sen!2sph!4v1693116958737!5m2!1sen!2sph" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <section id="contact-info" class="contact-info">
+            <br>
+            <h3>Contact Information</h3>
+            <p>Café Address: Brgy.Tiniguiban, Puerto Princesa City, Palawan</p>
+            <p>Phone Number: 09165560831</p>
+            <p>Email: <a href="mailto:cozycupcoffee@gmail.com">cozycupcoffee@gmail.com</a></p>
+        </section>
+
+        <section id="contact-form" class="contact-form">
+            <br>
+            <h3>Contact Form</h3>
+            <form action="your-server-script.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
     </section>
 
     <footer>

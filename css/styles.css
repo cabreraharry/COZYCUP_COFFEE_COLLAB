@@ -119,7 +119,7 @@ nav a:hover {
 }
 
 .menu {
-    height: 180vh;
+    height: fit-content;
     padding: 100px 0;
     text-align: center;
     background-color: #e9d0a6;
@@ -307,9 +307,106 @@ nav a:hover {
     margin-bottom: 40px;
 }
 
+/* Contact Form Styling */
+/* Contact Form Styling */
+.contact-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: left; /* Align form elements to the left */
+    max-width: 500px; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+.contact-form h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px; /* Increase font size for better readability */
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px; /* Set a minimum height for the textarea */
+}
+
+.contact-form button {
+    background-color: #4c3c32;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px; /* Increase font size for better readability */
+}
+
+.contact-form button:hover {
+    background-color: #7e685b;
+}
+
+/* Style the form submit button as a block element for better alignment */
+.contact-form button[type="submit"] {
+    display: block;
+    margin-top: 15px;
+}
+
+
 footer {
     background-color: #4c3c32;
     color: white;
     text-align: center;
     padding: 20px 0;
 }
+
+
+
+/* design for the "Back to Home" button for About us page*/
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4c3c32;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 20px;
+}
+
+.back-button a {
+    text-decoration: none;
+    color: white;
+}
+
+.back-button:hover {
+    background-color: #7e685b;
+    color: black; /* this Changes font color to black on hover */
+}
+
+/* Text alignment for paragraphs and lists */
+.about p,
+.about ul,
+.about li {
+    text-align: justify;
+}
+
