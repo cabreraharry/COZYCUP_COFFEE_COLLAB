@@ -7,7 +7,10 @@
     <title>CozyCup Café</title>
     <script type="text/javascript" src="script.js"></script>
 </head>
-<link rel="icon" type="image/png" href="img/logo.png">
+
+<link rel="icon" type="image/png" href="img/logo.png"><!--This is for favicon of the page-->
+
+
 <body>
     <header>
         <nav>
@@ -23,20 +26,30 @@
         </nav>
     </header>
 
+    <!--Homepage content-->
     <section id="home" class="hero">
         <div class="home_section home_text">
             <h1>Welcome to CozyCup Café</h1>
             <p>Where Every Grind Leads to Greatness</p>
             <a href="#menu" class="cta-button">Explore Menu</a><br>
-        </div>
-        <div class="home_section home_coffee">
-            coffee
-        </div>
-        <div class="home_section home_pastries">
-            pastries
-        </div>
-    </section>
 
+    </section>
+    <!--This is the footer for the homepage-->
+    <footer><a href="#about" class="cta-button">About Us  </a><a href="https://www.facebook.com/cozycup.com.ph" target="_blank">
+        <img src="img/fblogo.png" alt="fb" height="50"></a> <a href="#contact" class="cta-button">Contact Us</a></footer>
+        <footer>
+            <div class="signup-form"><!--here is the sign-up form-->
+                <h3>Sign Up for Our Newsletter</h3>
+                <p>Stay updated with our latest offers and news.</p>
+                <form action="#" method="post">
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </footer>
+        
+
+    <!--Menu content-->
     <section id="menu" class="menu">
         <h2>MENU</h2>
         <div class="items">
@@ -188,18 +201,22 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section><footer><a href="#home" class="cta-button">Home</a> <a href="#about" class="cta-button">About Us</a> <a href="#contact" class="cta-button">Contact Us</a></footer>
+                    
 
 
-        <section class="about">
+
+<!--This is the code for the 'About Us' page-->
+        <section id="about" class="about">
             <h2>About Us</h2>
             <p>Welcome to CozyCup Café, where every cup tells a story. Our journey began in a small, charming corner of town, where a passionate group of coffee enthusiasts decided to create a haven for fellow caffeine connoisseurs.</p>
             
             <h3>Café Story</h3>
             <p>Our story is one of dedication to the art of brewing, an unwavering commitment to quality, and an insatiable love for coffee. It all started with a dream: to provide a cozy retreat for people to escape the daily hustle and savor the simple pleasures of life.</p>
-            
+
             <img src="img/coffeeshop.jpg" alt="Coffee shop">
-            
+            <br>
+            <br>
             <h3>Origins</h3>
             <p>CozyCup Café was founded in 2023 by Elsid Panolino and Harry Cabrera, coffee aficionados with a vision to share exceptional coffee experiences. What began as a small, owned café has blossomed into a beloved community gathering place.</p>
             
@@ -222,16 +239,20 @@
                 <h5>Harry Ericson Cabrera</h5>
                 <p>Harry Ericson Cabrera, a dedicated member of our team, brings warmth to every cup served. With a genuine smile and a passion for coffee, Harry ensures that each customer's visit is memorable. From crafting exquisite brews to creating a welcoming ambiance, our staff is the heart of the coffee shop experience.</p>
             </div>
-        </section>
+        </section><footer><a href="#home" class="cta-button">Home</a> <a href="#menu" class="cta-button">Menu</a> <a href="#contact" class="cta-button">Contact Us</a></footer>
     
 
+<!--This is the code for the 'Contact us' page-->
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
         <p>Have questions or feedback? Reach out to us...</p>
 
+        <a href="https://www.facebook.com/cozycup.com.ph" target="_blank">
+            <img src="img/fblogo.png" alt="fb" height="50"></a>
+
         <section id="location" class="location">
             <br>
-            <h3>Our Location</h3>
+            <h3>Or visit us here!</h3>
             <div class="map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1196.7706620852528!2d118.7338401246605!3d9.778127003080304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33b56308fbe5d3b9%3A0xa88cba1de1384e9a!2sInformation%20Technology%20Building%2C%20Palawan%20State%20University%20Main%20Campus%2C%20Puerto%20Princesa%2C%205300%20Palawan!5e0!3m2!1sen!2sph!4v1693116958737!5m2!1sen!2sph" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
@@ -245,6 +266,7 @@
             <p>Email: <a href="mailto:cozycupcoffee@gmail.com">cozycupcoffee@gmail.com</a></p>
         </section>
 
+        <!--This is the CONTACT FORM code-->
         <section id="contact-form" class="contact-form">
             <br>
             <h3>Contact Form</h3>
@@ -266,8 +288,15 @@
         </section>
     </section>
 
-    <footer>
+<!--footer with nav links-->
+    
+    <footer><a href="#home" class="cta-button">Home</a> <a href="#menu" class="cta-button">Menu</a> <a href="#about" class="cta-button">About Us</a>
+    
         <p>&copy; 2023 CozyCup Café. All rights reserved.</p>
+        <br> <a href="https://www.facebook.com/cozycup.com.ph" target="_blank">
+            <img src="img/fblogo.png" alt="fb" height="50">
+        </a>
+        
     </footer>
 </body>
 </html>
