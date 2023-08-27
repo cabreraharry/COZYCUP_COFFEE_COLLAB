@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <title>CozyCup Café</title>
+    <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
     <header>
@@ -35,21 +36,55 @@
             <h3>COFFEE</h3>
             <br><br>
             <div class="item_group">
-                <div class="item">
+
+                <div class="item" onclick="showOnClick('espresso')">
                     <img class="menu_img" src="img/menu/espresso.jpg">
-                    Espresso
+                    <div class="item_label">
+                            <p class="price">₱100.00</p><br>
+                            <p class="description">Concentrated coffee shot brewed by forcing hot water through finely-ground coffee beans<br><br>click to order</p>
+                    </div>
+                    <div class="option" id="espresso" onclick="alertOrder('espresso')">
+                        <div class="option_btn btn_hot">hot</div>
+                        <div class="option_btn btn_iced">iced</div>
+                    </div>
+                    <br><br><p class="item_name">Espresso</p>
                 </div>
-                <div class="item">
+                <div class="item" onclick="showOnClick('americano')">
+
                     <img class="menu_img" src="img/menu/americano.jpg">
-                    Americano
+                    <div class="item_label">
+                        <p class="price">₱120.00</p><br>
+                        <p class="description">Created by adding hot water to espresso, resulting in a milder flavor<br><br>click to order</p>
+                    </div>
+                    <div class="option" id="americano" onclick="alertOrder('americano')">
+                        <div class="option_btn btn_hot">hot</div>
+                        <div class="option_btn btn_iced">iced</div>
+                    </div>
+                    <br><br><p class="item_name">Americano</p>
                 </div>
-                <div class="item">
+                <div class="item" onclick="showOnClick('latte')">
                     <img class="menu_img" src="img/menu/latte.jpg">
-                    Latte
+                    <div class="item_label">
+                        <p class="price">₱120.00</p><br>
+                        <p class="description">Consists of espresso and a larger amount of steamed milk, usually with a small layer of milk foam<br><br>click to order</p>
+                    </div>
+                    <div class="option" id="latte" onclick="alertOrder('latte')">
+                        <div class="option_btn btn_hot">hot</div>
+                        <div class="option_btn btn_iced">iced</div>
+                    </div>
+                    <br><br><p class="item_name">Latte</p>
                 </div>
-                <div class="item">
+                <div class="item" onclick="showOnClick('cappuccino')">
                     <img class="menu_img" src="img/menu/cappuccino.jpg">
-                    Cappuccino
+                    <div class="item_label">
+                        <p class="price">₱120.00</p><br>
+                        <p class="description">Made with equal parts of espresso, steamed milk, and milk foam, offering a balanced and frothy texture<br><br>click to order</p>
+                    </div>
+                    <div class="option" id="cappuccino" onclick="alertOrder('cappuccino')">
+                        <div class="option_btn btn_hot">hot</div>
+                        <div class="option_btn btn_iced">iced</div>
+                    </div>
+                    <br><br><p class="item_name">Cappuccino</p>
                 </div>
             </div>
         </div>
