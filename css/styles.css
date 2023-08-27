@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background-color: #fff;
+    background-color: #cebb9d;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
 }
@@ -46,19 +46,63 @@ nav a:hover {
 .hero {
     text-align: center;
     padding: 150px 0;
-    background-image: url('hero-bg.jpg');
+    background-image: url('../img/hero-bg.jpg');
     background-size: cover;
-    color: white;
+    color: rgb(235, 231, 211);
+    height: 100vh;
+}
+/* Panolino Home start*/
+.hero{
+    display: grid;
+    row-gap: 20px;
+    column-gap: 20px;
+    padding: 5% 10% 5% 10%;
+}
+.home_section{
+    width: 30%;
+}
+.home_text{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: linear-gradient(-45deg,rgba(101, 93, 90, 0.124), rgba(63, 26, 14, 0.746));
+}
+.home_coffee{
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    height:100%;
+
+    background-image: linear-gradient(rgba(132, 120, 114, 0), rgba(48, 30, 25, 0.851));
+}
+.home_pastries{
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+    height: 100%;
+
+    
+    background-image: linear-gradient(45deg,rgba(179, 148, 140, 0.198), rgba(69, 31, 22, 0.815));
 }
 
+/* Panolino Home end */
 .hero h1 {
-    font-size: 36px;
+    font-size: 50px;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 2px #4c3c32;
 }
 
 .hero p {
-    font-size: 18px;
+    font-size: 25px;
     margin-bottom: 40px;
+    text-shadow: 2px 2px 2px #4c3c32;
 }
 
 .cta-button {
@@ -75,6 +119,7 @@ nav a:hover {
 }
 
 .menu {
+    height: 100vh;
     padding: 100px 0;
     text-align: center;
     background-color: #e9d0a6;
@@ -82,8 +127,9 @@ nav a:hover {
 }
 
 .menu h2 {
-    font-size: 30px;
+    font-size: 50px;
     margin-bottom: 20px;
+    font-weight: 100;
 }
 
 /* Panolino MENU start*/
