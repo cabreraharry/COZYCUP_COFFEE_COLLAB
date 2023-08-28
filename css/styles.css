@@ -12,8 +12,9 @@ body {
 
 header {
     background-color: #cebb9d;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 15px 5px #44161650;
     padding: 20px;
+    z-index: 1;
 }
 
 nav {
@@ -57,81 +58,95 @@ nav a:hover {
     row-gap: 20px;
     column-gap: 20px;
     padding: 5% 10% 5% 10%;
+
+    grid-template-columns: 8fr 10fr;
+    grid-template-rows: 2fr 3fr;
+
 }
 .home_section{
     width: 30%;
+    box-shadow: 10px 10px 15px 5px #0000009f;
 }
 .home_section{
     width: 30%;
+    height: fit-content;
+    padding: 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 8fr 10fr;
     grid-template-rows: 1fr 1fr;
     gap: 10px;
+    transition: transform 0.3s;
+    transition-timing-function: cubic-bezier();
+    
 }
 .home_text{
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row: 1;
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
 
-    background-image: linear-gradient(-45deg,rgba(101, 93, 90, 0.124), rgba(63, 26, 14, 0.746));
+    background-image: linear-gradient(-45deg,rgba(101, 93, 90, 0.33), rgba(31, 10, 10, 0.301), rgba(49, 30, 20, 0.746));
 }
-.home_coffee{
+.home_best_seller{
     grid-column: 1;
     grid-row: 2;
-    width: 100%;
-    height:100%;
+    width:95%;
     border-radius: 10px;
 
-    background-image: linear-gradient(rgba(132, 120, 114, 0), rgba(48, 30, 25, 0.851));
+    background-image: linear-gradient(rgba(132, 120, 114, 0.476),rgba(66, 45, 45, 0.325), rgba(70, 50, 36, 0.851));
     display: grid;
     justify-content: center;
     align-content: center;
-    grid-template-columns: 120px 120px 120px;
-    grid-template-rows: 120px 120px 120px;
+    grid-template-columns: 120px 120px 120px 120px;
+    grid-template-rows: 120px 120px 120px 60px;
 }
-.home_pastry{
+.home_featured{
     grid-column: 2;
     grid-row: 2;
-    width: 100%;
-    height: 100%;
+    width: 95%;
     border-radius: 10px;
     
-    background-image: linear-gradient(45deg,rgba(179, 148, 140, 0.198), rgba(69, 31, 22, 0.815));
+    background-image: linear-gradient(45deg,rgba(179, 148, 140, 0.469), rgba(77, 46, 46, 0.327), rgba(69, 31, 22, 0.815));
 
     display: grid;
     justify-content: center;
     align-content: center;
-    grid-template-columns: 120px 120px 120px;
-    grid-template-rows: 120px 120px 120px;
+    grid-template-columns: 120px 120px 120px 120px;
+    grid-template-rows: 120px 120px 120px 60px;
 }
 
-/* Panolino Home end */
+.home_section:hover{
+    transform: rotate(-3deg) scale(1.05);
+
+}
+
 .hero h1 {
-    font-size: 50px;
+    font-size: 60px;
     margin-bottom: 20px;
     text-shadow: 2px 2px 2px #4c3c32;
 }
 
 .hero p {
-    font-size: 25px;
+    font-size: 30px;
     margin-bottom: 40px;
     text-shadow: 2px 2px 2px #4c3c32;
 }
 
 .cta-button {
+    height: 40px;
+    width: 120px;
     display: inline-block;
     padding: 10px 20px;
     background-color: #4c3c32;
     color: white;
     text-decoration: none;
     border-radius: 5px;
+
 }
 
 .cta-button:hover {
@@ -141,9 +156,18 @@ nav a:hover {
 .home_img{
     border-radius: 10px;
     box-shadow: 5px 5px 3px #1a14086e;
+    filter:blur(10);
+    transition: transform 0.3s;
+    transition-timing-function: cubic-bezier();
+}
+
+.home_img:hover{
+    transform: rotate(3deg) scale(1.2);
+    filter: brightness(120%);
 }
 .hm_img_c1{
-    background-image: url("../img/menu/cappuccino.jpg");
+    background-image: url("../img/menu/pastry/cookies.jpg");
+
     background-color: #ffb300;
     grid-row-start: 1;
     grid-row-end: 3;
@@ -178,7 +202,40 @@ nav a:hover {
 .hm_img_c4{
     background-image: url("../img/menu/matcha_latte.jpg");
     background-color: #453a3a;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 4;
+    grid-column-end: 5;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.hm_img_c5{
+    /* background-image: url("../img/menu/matcha_latte.jpg"); */
+    background-color: #594a4a;
     grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.hm_img_c6{
+    background-image: url("../img/menu/pastry/pandesal2.jpg");
+    background-color: #453a3a;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 4;
+    grid-column-end: 5;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.hm_img_c7{
+    background-image: url("../img/menu/pastry/crossaint.jpg");
+    background-color: #453a3a;
+    grid-row-start: 3;
     grid-row-end: 4;
     grid-column-start: 3;
     grid-column-end: 4;
@@ -199,7 +256,19 @@ nav a:hover {
     background-repeat: no-repeat;
 }
 .hm_img_p2{
-    background-image: url("../img/menu/pastry/pandesal2.jpg");
+    background-image: url("../img/menu/starwberry_latte.jpg");
+    background-color: #888888;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 4;
+    grid-column-end: 5;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.hm_img_p3{
+    background-image: url("../img/menu/matcha_latte2.jpg");
     background-color: #827956;
     grid-row-start: 2;
     grid-row-end: 4;
@@ -209,20 +278,45 @@ nav a:hover {
     background-size: contain;
     background-repeat: no-repeat;
 }
-.hm_img_p3{
-    background-image: url("../img/menu/pastry/cookies.jpg");
+
+.hm_img_p4{
+    background-image: url("../img/menu/cappuccino.jpg");
     background-color: #b3a881;
 
     grid-row-start: 2;
     grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 5;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.hm_img_p5{
+    background-image: url("../img/menu/pastry/brownies.jpg");
+    background-color: #b3a881;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
     grid-column-start: 2;
-    grid-column-end: 4;
+    grid-column-end: 3;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.hm_img_p6{
+    background-image: url("../img/menu/espresso.jpg");
+    background-color: #736947;
+
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
 
     background-size: contain;
     background-repeat: no-repeat;
 }
 
-
+/* Panolino Home end */
 
 
 .menu {
@@ -241,9 +335,6 @@ nav a:hover {
 
 /* Panolino MENU start*/
 
-.items{
-    /*  */
-}
 .item_group{
     display: flex;
     flex-direction: row;
