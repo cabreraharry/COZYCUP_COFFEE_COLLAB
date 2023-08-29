@@ -66,12 +66,14 @@ nav a:hover {
 
 }
 .home_section{
+    padding: 50px;
     width: 30%;
     box-shadow: 10px 10px 15px 5px #0000009f;
 }
 .home_section{
     width: 30%;
     height: fit-content;
+    width: fit-content;
     padding: 10px;
     display: grid;
     grid-template-columns: 8fr 10fr;
@@ -157,7 +159,7 @@ nav a:hover {
 
 .home_img{
     border-radius: 10px;
-    box-shadow: 5px 5px 3px #1a14086e;
+    box-shadow: 5px 5px 5px 5px #26171789;
     filter:blur(10);
     transition: transform 0.3s;
     transition-timing-function: cubic-bezier();
@@ -324,19 +326,21 @@ nav a:hover {
 .menu {
     height: fit-content;
     background-color: #e9d0a6;
-    background-image: url("/img/wood.jpg");
+    /* background-image: url("/img/wood.jpg"); */
+    background-image: linear-gradient(#c6ab8b,#c5b08a, #a47d61);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .items{
     display: grid;
-    grid-template-rows: repeat(3, fit-content);
-    grid-template-columns: repeat(2, fit-content);
     row-gap: 50px;
     justify-content: center;
     align-content: center;
+    justify-items: center;
+    align-items: center;
     padding: 100px 0 100px 0;
+    
 }
 .menu_item{
     width: 100%;
@@ -344,16 +348,25 @@ nav a:hover {
     background-color: rgba(209, 193, 167, 0.849);
     border-radius: 20px;
     box-shadow: 5px 5px 10px 5px #362b2b88;
-
     display: grid;
-    grid-template-columns: 200px 400px;
-    grid-template-rows: 200px;
+    grid-template-rows: 150px;
+    transition: 300ms;
+    transition-timing-function: cubic-bezier();
+    filter: brightness(95%);
+}
+.left{
+
+    grid-template-columns: 150px 400px;
+    text-align: left;
+}
+.right{
+    grid-template-columns: 400px 150px;
+    text-align: right;
 }
 .item_img{
     margin: 10px;
-    border-radius: 10px;
+    border-radius: 100%;
     box-shadow: 3px 3px 5px 3px #1914147a;
-
     background-size: contain;
 }
 .item_txt{
@@ -361,33 +374,59 @@ nav a:hover {
     flex-direction: column;
     justify-content: center;
     margin: 10px;
-    text-align: left;
     align-content: center;
 }
 .item_txt_name{
-    font-size: 25px;
+    font-size: 30px;
+    text-shadow: 1px 1px 2px #1e1e1e98;
 }
 .item_txt_price{
-    font-size: 35px;
+    font-size: 40px;
     font-weight: bold;
+    text-shadow: 3px 3px 3px #1e1e1e98;
 }
 .item_txt_description{
     font-size: 18px;
-    text-align: left;
+    text-shadow: 1px 1px 2px #1e1e1e59;
+}
+.hot_iced{
+    height: 100%;
+    width: 100%;
+    background-color: inherit;
 }
 .menu_text{
     grid-row: 1/2;
     grid-column: 1/3;
+    font-size: 25px;
+
+    font-weight: 100;
+
+    color: #4c3c32;
+}
+/* Menu_item Animation */
+.menu_item:hover{
+    transform: scale(1.1);
+    filter: brightness(110%);
 }
 
 .menu_container{
-    background-image: linear-gradient(200deg,#4a160093, #a26c4658, #9a8778a9);
+    background-image: linear-gradient(#fffadd7d, #a573505a, #2a1005b3);
     border-radius: 30px;
     padding: 50px;
-    box-shadow: 5px 5px 10px 5px #453a3a73;
+    box-shadow: 5px 5px 10px 5px #07040496;
 
+    transition:500ms;
+    transition-timing-function: cubic-bezier();
+
+    height: fit-content;
+    width: fit-content;
     justify-content: center;
     align-content: center;
+    justify-items: center;
+    align-content: center;
+}
+.menu_container:hover{
+    transform: scale(1.01);
 }
 .menu_header{
     width: 100%;
@@ -395,11 +434,6 @@ nav a:hover {
     background-color: rgba(209, 193, 167, 0.849);
     border-radius: 20px;
     box-shadow: 5px 5px 10px 5px #362b2b88;
-}
-.menu_overlay{
-    background-image: linear-gradient(#ffffffcb, #ffffff99, #ffffff00);
-    width: 100%;
-    height: 100%;
 }
 .menu_drinks{
     grid-row: 2/3;
@@ -415,6 +449,10 @@ nav a:hover {
 .menu_drinks_text{
     grid-row: 1/2;
     grid-column: 1/3;
+
+    font-size: 20px;
+
+    color: #4c3c32;
 }
 .menu_coffee{
     grid-row: 2/3;
@@ -425,6 +463,8 @@ nav a:hover {
     grid-template-columns: repeat(1);
     gap:15px;
 
+    background-image: none;
+    background-color: #dcd4b777;
     color: #e9d0a6;
 }
 .menu_other_drinks{
@@ -436,7 +476,8 @@ nav a:hover {
     grid-template-columns: repeat(1);
     gap:15px;
 
-    height: fit-content;
+    background-image: none;
+    background-color: #6f6f6f77;
 }
 
 .menu_coffee_text{
@@ -456,7 +497,7 @@ nav a:hover {
 }
 .menu_coffee_cappuccino{
     background-color: #d0b391e0;
-    color: #4c3c32;
+    color: #46352a;
 }
 .menu_coffee_latte{
     background-color: #fee0c2fe;
@@ -474,54 +515,66 @@ nav a:hover {
 }
 .menu_other_drinks_matcha_latte{
 
-    background-color: #98dc76e9;
+    background-color: #98dc76a7;
+    color: #083f00df;
 }
 .menu_other_drinks_strawberry_latte{
-
-
-    background-color: #ff6464ea;
+    background-color: #ff6464a1;
+    color: #7a0c0c;
 }
 .menu_other_drinks_tea{
 
-    background-color: #9d000093;
+    background-color: #4c000089;
+    color: #ff8b74d8;
 }
 .menu_pastry{
     grid-row: 3/4;
     grid-column: 1/2;
 
     display: grid;
-    grid-template-rows: repeat(2);
+    grid-template-rows: repeat(5);
     grid-template-columns: repeat(1);
-    gap: 5px;
+    gap:15px;
+
+    color: #e9d0a6;
 }
 .menu_pastry_text{
     grid-row: 1/2;
     grid-column: 1/2;
+
+    font-size: 20px;
+
+    color: #4c3c32;
 }
 .menu_pastry_items{
     display: grid;
-    grid-template-columns: repeat(5, 200px);
-    grid-template-rows: repeat(2,200px);
+    height: fit-content;
+    grid-template-columns: repeat(1, 600px);
+    grid-template-rows: repeat(4,175px);
     gap: 15px;
+
+    margin-left: 100px;
+    margin-right: 100px;
+
+    background-image: none;
+    background-color: #dcd4b777;
 }
 
 .menu_pandesal{
-    grid-row: 1/3;
-    grid-column: 1/3;
-
-    background-color: #ad7a5c;
+    background-color: #b1713d;
+    color: #faf0d0;
 }
 .menu_crossaint{
-    grid-row: 1/2;
-    grid-column: 3/5;
+    background-color: #ad8e5c;
+    color: #faf0d0;
 }
 .menu_brownies{
-    grid-row: 2/3;
-    grid-column: 3/5;
+    background-color: #4d3228;
+    color: #faf0d0;
 }
 .menu_cookies{
-    grid-row: 1/3;
-    grid-column: 5/6;
+    background-color: #ad8a5c;
+    color: #422f2b;
 }
 
 
