@@ -81,158 +81,78 @@
 
     <!--Menu content-->
     <section id="menu" class="menu">
-        <h2>MENU</h2>
         <div class="items">
-            <br><br>
-            <hr class="divider">
-            <h3>Coffee and other Drinks</h3>
-            <br><br>
-            <div class="item_group">
-
-                <div class="item" onclick="showOnClick('espresso')">
-                    <img class="menu_img" src="img/menu/espresso.jpg">
-                    <div class="item_label">
-                            <p class="price">₱100.00</p><br>
-                            <p class="description">Concentrated coffee shot brewed by forcing hot water through finely-ground coffee beans<br><br>click to order</p>
-                    </div>
-                    <div class="option" id="espresso" onclick="alertOrder('espresso')">
-                        <div class="option_btn btn_hot">hot</div>
-                        <div class="option_btn btn_iced">iced</div>
-                    </div>
-                    <br><br><p class="item_name">Espresso</p>
+            <div class="menu_text">
+                <h1>Menu</h1>
+            </div>
+            <div class="menu_container menu_drinks">
+                <div class="menu_drinks_text">
+                    <h2>Drinks</h2>
                 </div>
-                <div class="item" onclick="showOnClick('americano')">
-
-                    <img class="menu_img" src="img/menu/americano.jpg">
-                    <div class="item_label">
-                        <p class="price">₱120.00</p><br>
-                        <p class="description">Created by adding hot water to espresso, resulting in a milder flavor<br><br>click to order</p>
+                <div class="menu_container menu_coffee">
+                    <div class="menu_header menu_coffee_text">
+                        <h2>Coffee</h2>
                     </div>
-                    <div class="option" id="americano" onclick="alertOrder('americano')">
-                        <div class="option_btn btn_hot">hot</div>
-                        <div class="option_btn btn_iced">iced</div>
+                    <div class="menu_item menu_coffee_espresso">
+                        <div class="item_img" style="background-image: url('/img/menu/espresso.jpg');"></div>
+                        <div class="item_txt">
+                            <p class="item_txt_name">Espresso</p>
+                            <p class="item_txt_price">₱100</p>
+                            <p class="item_txt_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum recusandae culpa commodi minima nisi praesentium!</p>
+                        </div>
                     </div>
-                    <br><br><p class="item_name">Americano</p>
+                    <div class="menu_item menu_coffee_americano">
+                        <div class="item_img" style="background-image: url('/img/menu/americano.jpg');"></div>
+                        <div class="item_txt">
+                            <p class="item_txt_name">Americano</p>
+                            <p class="item_txt_price">₱120</p>
+                            <p class="item_txt_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum recusandae culpa commodi minima nisi praesentium!</p>
+                        </div>
+                    </div>
+                    <div class="menu_item menu_coffee_cappuccino">
+                        <div class="item_img" style="background-image: url('/img/menu/cappuccino.jpg');"></div>
+                        <div class="item_txt">
+                            <p class="item_txt_name">Cappuccino</p>
+                            <p class="item_txt_price">₱120</p>
+                            <p class="item_txt_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum recusandae culpa commodi minima nisi praesentium!</p>
+                        </div>
+                    </div>
+                    <div class="menu_item menu_coffee_latte">
+                        <div class="item_img" style="background-image: url('/img/menu/espresso.jpg');"></div>
+                        <div class="item_txt">
+                            <p class="item_txt_name">Latte</p>
+                            <p class="item_txt_price">₱120</p>
+                            <p class="item_txt_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum recusandae culpa commodi minima nisi praesentium!</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="item" onclick="showOnClick('latte')">
-                    <img class="menu_img" src="img/menu/latte.jpg">
-                    <div class="item_label">
-                        <p class="price">₱120.00</p><br>
-                        <p class="description">Consists of espresso and a larger amount of steamed milk, usually with a small layer of milk foam<br><br>click to order</p>
+                <div class="menu_container menu_other_drinks">
+                    <div class="menu_item menu_other_drinks_text">
+                        <h2>Other drinks</h2>
                     </div>
-                    <div class="option" id="latte" onclick="alertOrder('latte')">
-                        <div class="option_btn btn_hot">hot</div>
-                        <div class="option_btn btn_iced">iced</div>
-                    </div>
-                    <br><br><p class="item_name">Latte</p>
-                </div>
-                <div class="item" onclick="showOnClick('cappuccino')">
-                    <img class="menu_img" src="img/menu/cappuccino.jpg">
-                    <div class="item_label">
-                        <p class="price">₱120.00</p><br>
-                        <p class="description">Made with equal parts of espresso, steamed milk, and milk foam, offering a balanced and frothy texture<br><br>click to order</p>
-                    </div>
-                    <div class="option" id="cappuccino" onclick="alertOrder('cappuccino')">
-                        <div class="option_btn btn_hot">hot</div>
-                        <div class="option_btn btn_iced">iced</div>
-                    </div>
-                    <br><br><p class="item_name">Cappuccino</p>
+                    <div class="menu_item menu_other_drinks_matcha_latte"></div>
+                    <div class="menu_item menu_other_drinks_strawberry_latte"></div>
+                    <div class="menu_item menu_other_drinks_tea"></div>
                 </div>
             </div>
-            <br><br><br><br><br><br>
-            <div class="item_group">
 
-                <div class="item" onclick="showOnClick('matcha_latte')">
-                    <img class="menu_img" src="img/menu/matcha_latte.jpg">
-                    <div class="item_label" style="color:#2a5d29 ; background-image: linear-gradient(rgba(205, 251, 173, 0.7), rgba(203, 241, 157, 0.65), rgba(234, 251, 173, 0));
-                    ;">
-                            <p class="price">₱120.00</p><br>
-                            <p class="description">Made from matcha powder and milk. Matcha is a finely ground, vibrant green tea powder made from shade-grown tea leaves <br><br>click to order</p>
-                    </div>
-                    <div class="option" id="matcha_latte" onclick="alertOrder('matcha_latte')" style="background-color: #2a5d2998; color: #c0ffb0">
-                        ORDER
-                    </div>
-                    <br><br><p class="item_name">Matcha Latte</p>
+            <div class="menu_container menu_pastry">
+                <div class="menu_pastry_text">
+                    <h2>Pastry</h2>
                 </div>
-                <div class="item" onclick="showOnClick('tea')">
-                    <img class="menu_img" src="img/menu/tea.jpg">
-                    <div class="item_label">
-                            <p class="price">₱80.00</p><br>
-                            <p class="description">Beverage made by steeping dried tea leaves or herbal blends in hot water. It has been enjoyed for centuries<br><br>click to order</p>
-                    </div>
-                    <div class="option" id="tea" onclick="alertOrder('matcha_latte')" style="background-color: #38220d98; color: #d1c09b">
-                        ORDER
-                    </div>
-                    <br><br><p class="item_name">Tea</p>
-                </div>
-                <div class="item" onclick="showOnClick('strawberry_latte')">
-                    <img class="menu_img" src="img/menu/starwberry_latte.jpg">
-                    <div class="item_label" style="color:#5d2929 ; background-image: linear-gradient(rgba(251, 173, 173, 0.7), rgba(241, 157, 157, 0.65), rgba(251, 173, 173, 0));
-                    ;">
-                            <p class="price">₱120.00</p><br>
-                            <p class="description"> Flavorful and colorful beverage that combines the essence of strawberries with the creamy texture of a traditional latte <br><br>click to order</p>
-                    </div>
-                    <div class="option" id="strawberry_latte" onclick="alertOrder('strawberry_latte')" style="background-color: #a0464698; color: #fdbebe">
-                        ORDER
-                    </div>
-                    <br><br><p class="item_name">Strawberry Latte</p>
-                </div>
-            </div>
-            <br><br><br><br><br><br>
-            <br><br>
-            <hr class="divider">
-            <h3>Coffee and other Drinks</h3>
-            <br><br>
-            <div class="item_group">
-
-                <div class="item" onclick="showOnClick('pandesal')">
-                    <img class="menu_img" src="img/menu/pastry/pandesal.jpg">
-                    <div class="item_label">
-                            <p class="price">₱20.00</p><br>
-                            <p class="description">Soft and slightly sweet bread roll that is often enjoyed as a breakfast item or a snack. It is typically made from simple ingredients such as flour, yeast, sugar, salt, and water. <br><br>click to order</p>
-                    </div>
-                    <div class="option" id="pandesal" onclick="alertOrder('pandesal')">
-                        ORDER
-                    </div>
-                    <br><br><p class="item_name">Pandesal</p>
-                </div>
-                <div class="item" onclick="showOnClick('crossaint')">
-                    <img class="menu_img" src="img/menu/pastry/crossaint.jpg">
-                    <div class="item_label">
-                            <p class="price">₱50.00</p><br>
-                            <p class="description">Flaky and buttery pastry that originated in France. It is known for its distinctive crescent shape and delicious, layered texture. Croissants are a popular breakfast item and pastry around the world. <br><br>click to order</p>
-                    </div>
-                    <div class="option" id="crossaint" onclick="alertOrder('crossaint')">
-                        ORDER
-                    </div>
-                    <br><br><p class="item_name">Crossaint</p>
-                </div>
-                <div class="item" onclick="showOnClick('cookies')">
-                    <img class="menu_img" src="img/menu/pastry/cookies.jpg">
-                    <div class="item_label">
-                            <p class="price">₱40.00</p><br>
-                            <p class="description">Baked treats that come in a variety of flavors, textures, and shapes. They are a popular dessert and snack option enjoyed by people of all ages around the world. <br><br>click to order</p>
-                    </div>
-                    <div class="option" id="cookies" onclick="alertOrder('cookies')">
-                        ORDER
-                    </div>
-                    <br><br><p class="item_name">Cookies</p>
-                </div>
-                <div class="item" onclick="showOnClick('brownies')">
-                    <img class="menu_img" src="img/menu/pastry/brownies.jpg">
-                    <div class="item_label">
-                            <p class="price">₱30.00</p><br>
-                            <p class="description">Baked dessert that are known for their rich, fudgy, and chocolatey flavor. They are typically characterized by their dense and moist texture. <br><br>click to order</p>
-                    </div>
-                    <div class="option" id="brownies" onclick="alertOrder('brownies')">
-                        ORDER
-                    </div>
-                    <br><br><p class="item_name">Brownies</p>
+                <div class="menu_container menu_pastry_items">
+                    <div class="menu_item menu_pandesal"></div>
+                    <div class="menu_item menu_crossaint"></div>
+                    <div class="menu_item menu_brownies"></div>
+                    <div class="menu_item menu_cookies"></div>
                 </div>
             </div>
         </div>
-    </section><footer><a href="#home" class="cta-button">Home</a><a href="#about" class="cta-button">About Us</a><a href="#contact" class="cta-button">Contact Us</a></footer>
+    </section>
 
+    <footer>
+        <a href="#home" class="cta-button">Home</a><a href="#about" class="cta-button">About Us</a><a href="#contact" class="cta-button">Contact Us</a>
+    </footer>
 
         <section class="about">
             <h2>About Us</h2>

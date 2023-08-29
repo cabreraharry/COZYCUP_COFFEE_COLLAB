@@ -320,156 +320,210 @@ nav a:hover {
 
 /* Panolino Home end */
 
-
+/* Panolino MENU start */
 .menu {
     height: fit-content;
-    padding: 100px 0;
-    text-align: center;
     background-color: #e9d0a6;
-
+    background-image: url("/img/wood.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.menu h2 {
-    font-size: 50px;
-    margin-bottom: 20px;
-    font-weight: 100;
-}
-
-/* Panolino MENU start*/
-
-.item_group{
-    display: flex;
-    flex-direction: row;
+.items{
+    display: grid;
+    grid-template-rows: repeat(3, fit-content);
+    grid-template-columns: repeat(2, fit-content);
+    row-gap: 50px;
     justify-content: center;
+    align-content: center;
+    padding: 100px 0 100px 0;
 }
-.item{
-    position: relative;
-    height: 300px;
-    width: 300px;
-    background-color: #4c3c3245;
-    margin: 0 10px 0 10px;
-    box-shadow: 3px 3px 5px#4c3c32;
-    border-radius: 10px;
-}
-.menu_img{
+.menu_item{
     width: 100%;
-    border-radius: 10px;
+    height: 100%;
+    background-color: rgba(209, 193, 167, 0.849);
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px 5px #362b2b88;
 
-    overflow: hidden;
-    position: relative;
-
-    transition: transform 500ms ease-in-out;
+    display: grid;
+    grid-template-columns: 200px 400px;
+    grid-template-rows: 200px;
 }
-.item_name{
-    font-size: 1.3rem;
-    font-weight: bold;
-}
-/* TEXTS start */
-.item_label{
-    height: 75%;
-    width: 100%;
+.item_img{
+    margin: 10px;
     border-radius: 10px;
+    box-shadow: 3px 3px 5px 3px #1914147a;
 
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-
-    background-image: linear-gradient(rgba(251, 215, 173, 0.7), rgba(251, 215, 173, 0.65), rgba(251, 215, 173, 0.0));
-
+    background-size: contain;
+}
+.item_txt{
     display: flex;
     flex-direction: column;
-    padding-top: 10px;
-}
-.price{
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-.description{
-    font-size: 1.1rem;
-    opacity: 0;
-}
-.option{
-    height: 25%;
-    width: 100%;
-    border-radius: 10px;
-
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-
-    background-color: #805e3cac;
-    color: #e9d1aa;
-    font-weight: bold;
-
-    display: none;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.option_btn{
-    width: 20%;
-    height: 60%;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    border-radius: 5px 5px 20px 20px;
-    transition-duration: 2500ms;
-    transition-timing-function: cubic-bezier();
+    margin: 10px;
+    text-align: left;
+    align-content: center;
 }
-.option_btn:hover{
-    box-shadow: inset 0 -35px 0 rgba(93, 71, 42, 0.819);
-    color: #f8f2e0;
+.item_txt_name{
+    font-size: 25px;
 }
-.btn_hot{
-    background-color: #fff0cc;
-    color: rgb(228, 179, 93);
+.item_txt_price{
+    font-size: 35px;
+    font-weight: bold;
 }
-.btn_iced{
-    background-color: #ffe5cb;
-    color: rgb(124, 162, 152);
+.item_txt_description{
+    font-size: 18px;
+    text-align: left;
 }
-/* TEXTS end */
-/* Menu label animation start*/
-
-/* IMPLEMENTATION */
-
-.item:hover .description{
-    animation-name: full_opacity;
-    animation-duration: 1000ms;
-    animation-timing-function: cubic-bezier();
-    animation-fill-mode: forwards;
+.menu_text{
+    grid-row: 1/2;
+    grid-column: 1/3;
 }
 
-.item:hover .menu_img{
-    animation-name: lower_image_saturation;
-    animation-duration: 1000ms;
-    animation-fill-mode: forwards;
+.menu_container{
+    background-image: linear-gradient(200deg,#4a160093, #a26c4658, #9a8778a9);
+    border-radius: 30px;
+    padding: 50px;
+    box-shadow: 5px 5px 10px 5px #453a3a73;
+
+    justify-content: center;
+    align-content: center;
+}
+.menu_header{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(209, 193, 167, 0.849);
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px 5px #362b2b88;
+}
+.menu_overlay{
+    background-image: linear-gradient(#ffffffcb, #ffffff99, #ffffff00);
+    width: 100%;
+    height: 100%;
+}
+.menu_drinks{
+    grid-row: 2/3;
+    grid-column: 1/2;
+
+    display: grid;
+    grid-template-rows: repeat(2);
+    grid-template-columns: repeat(2);
+    gap: 50px;
+
+    align-items: center;
+}
+.menu_drinks_text{
+    grid-row: 1/2;
+    grid-column: 1/3;
+}
+.menu_coffee{
+    grid-row: 2/3;
+    grid-column: 1/2;
+
+    display: grid;
+    grid-template-rows: repeat(5);
+    grid-template-columns: repeat(1);
+    gap:15px;
+
+    color: #e9d0a6;
+}
+.menu_other_drinks{
+    grid-row: 2/3;
+    grid-column: 2/3;
+
+    display: grid;
+    grid-template-rows: repeat(5);
+    grid-template-columns: repeat(1);
+    gap:15px;
+
+    height: fit-content;
 }
 
-/* ANIMATION */
-
-@keyframes full_opacity {
-    from {opacity: 0;}
-    to {opacity: 1;}
+.menu_coffee_text{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    background-color: #74563b;
+    text-align: center;
+    justify-content: center;
+    font-size: larger;
+}
+.menu_coffee_espresso{
+    background-color: #331909b1;
+}
+.menu_coffee_americano{
+    background-color: #33190984;
+}
+.menu_coffee_cappuccino{
+    background-color: #d0b391e0;
+    color: #4c3c32;
+}
+.menu_coffee_latte{
+    background-color: #fee0c2fe;
+    color: #564539;
 }
 
-@keyframes lower_image_saturation {
-    from {filter: saturate(100%);}
-    to {filter: saturate(30%);}
+.menu_other_drinks_text{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    background-color: #efca98;
+    text-align: center;
+    justify-content: center;
+    font-size: larger;
 }
-@keyframes increase_size {
-    from {height: 300px; width: 300px;}
-    to {height: 310px; width: 310px}
+.menu_other_drinks_matcha_latte{
+
+    background-color: #98dc76e9;
+}
+.menu_other_drinks_strawberry_latte{
+
+
+    background-color: #ff6464ea;
+}
+.menu_other_drinks_tea{
+
+    background-color: #9d000093;
+}
+.menu_pastry{
+    grid-row: 3/4;
+    grid-column: 1/2;
+
+    display: grid;
+    grid-template-rows: repeat(2);
+    grid-template-columns: repeat(1);
+    gap: 5px;
+}
+.menu_pastry_text{
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+.menu_pastry_items{
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    grid-template-rows: repeat(2,200px);
+    gap: 15px;
 }
 
-/* Menu label animation end*/
+.menu_pandesal{
+    grid-row: 1/3;
+    grid-column: 1/3;
 
-.divider{
-    width: 300px;
-    border: 1px solid #4c3c32;
+    background-color: #ad7a5c;
 }
+.menu_crossaint{
+    grid-row: 1/2;
+    grid-column: 3/5;
+}
+.menu_brownies{
+    grid-row: 2/3;
+    grid-column: 3/5;
+}
+.menu_cookies{
+    grid-row: 1/3;
+    grid-column: 5/6;
+}
+
 
 /* Panolino MENU end */
 
